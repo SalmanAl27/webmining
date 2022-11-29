@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Content with notebooks &#8212; My sample book</title>
+    <title>Data crawling &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
-    <link rel="prev" title="Markdown Files" href="markdown.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,19 +113,11 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   Markdown Files
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Content with notebooks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks.html">
-   Notebooks with MyST Markdown
+   <strong>
+    Data crawling
+   </strong>
   </a>
  </li>
 </ul>
@@ -337,19 +326,25 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#markdown-notebooks">
-   Markdown + notebooks
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <strong>
+    Data crawling
+   </strong>
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#twint">
+     Twint
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#myst-markdown">
-   MyST markdown
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-blocks-and-outputs">
-   Code blocks and outputs
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengambil-data">
+   <strong>
+    Mengambil Data
+   </strong>
   </a>
  </li>
 </ul>
@@ -361,7 +356,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Content with notebooks</h1>
+                <h1>Data crawling</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -371,19 +366,25 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#markdown-notebooks">
-   Markdown + notebooks
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <strong>
+    Data crawling
+   </strong>
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#twint">
+     Twint
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#myst-markdown">
-   MyST markdown
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-blocks-and-outputs">
-   Code blocks and outputs
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengambil-data">
+   <strong>
+    Mengambil Data
+   </strong>
   </a>
  </li>
 </ul>
@@ -396,79 +397,393 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="content-with-notebooks">
-<h1>Content with notebooks<a class="headerlink" href="#content-with-notebooks" title="Permalink to this headline">#</a></h1>
-<p>You can also create content with Jupyter Notebooks. This means that you can include
-code blocks and their outputs in your book.</p>
-<section id="markdown-notebooks">
-<h2>Markdown + notebooks<a class="headerlink" href="#markdown-notebooks" title="Permalink to this headline">#</a></h2>
-<p>As it is markdown, you can embed images, HTML, etc into your posts!</p>
-<p><img alt="" src="https://myst-parser.readthedocs.io/en/latest/_static/logo-wide.svg" /></p>
-<p>You can also <span class="math notranslate nohighlight">\(add_{math}\)</span> and</p>
-<div class="math notranslate nohighlight">
-\[
-math^{blocks}
-\]</div>
-<p>or</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mbox{mean} la_{tex} \\ \\
-math blocks
-\end{aligned}
-\end{split}\]</div>
-<p>But make sure you $Escape $your $dollar signs $you want to keep!</p>
-</section>
-<section id="myst-markdown">
-<h2>MyST markdown<a class="headerlink" href="#myst-markdown" title="Permalink to this headline">#</a></h2>
-<p>MyST markdown works in Jupyter Notebooks as well. For more information about MyST markdown, check
-out <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST guide in Jupyter Book</a>,
-or see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">the MyST markdown documentation</a>.</p>
-</section>
-<section id="code-blocks-and-outputs">
-<h2>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this headline">#</a></h2>
-<p>Jupyter Book will also embed your code blocks and output in your book.
-For example, here’s some sample Matplotlib code:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-crawling">
+<h1><strong>Data crawling</strong><a class="headerlink" href="#data-crawling" title="Permalink to this headline">#</a></h1>
+<p>Data crawling adalah proses pengambilan data yang tersedia secara online untuk umum. Proses ini kemudian mengimpor informasi atau data yang telah ditemukan ke dalam file lokal di komputer Anda.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fixing random state for reproducibility</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
-
-<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">ii</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)))</span>
-
-
-<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
-<span class="n">custom_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">1.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)]</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Cold&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot&#39;</span><span class="p">]);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/notebooks_2_0.png" src="_images/notebooks_2_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">d5df0069828e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>       <span class="n">timeout_ms</span><span class="o">=</span><span class="n">timeout_ms</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>       <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">106</span>       <span class="n">readonly</span><span class="o">=</span><span class="n">readonly</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span> 
+<span class="g g-Whitespace">    </span><span class="mi">108</span> 
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">123</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">125</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">126</span> 
+<span class="g g-Whitespace">    </span><span class="mi">127</span>   <span class="n">mountpoint</span> <span class="o">=</span> <span class="n">_os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>   <span class="n">request_id</span> <span class="o">=</span> <span class="n">send_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">171</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">97</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="k">if</span> <span class="p">(</span><span class="n">reply</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;colab_reply&#39;</span> <span class="ow">and</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
 </div>
 </div>
-<p>There is a lot more that you can do with outputs (such as including interactive outputs)
-with your book. For more information about this, see <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a></p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/drive/MyDrive/web_mining/web_Mining
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/web_mining/web_Mining
+</pre></div>
+</div>
+</div>
+</div>
+<section id="twint">
+<h2>Twint<a class="headerlink" href="#twint" title="Permalink to this headline">#</a></h2>
+<p>Twint adalah sebuah tools yang digunakan untuk melakukan scrapping dari aplikasi twitter yang disetting secara khusus menggunakan bahasa pemrograman Python. Twint dapat kita gunakan dan jalankan tanpa harus menggunakan API dari Twitter itu sendiri, dengan kapasitas scrapping data maksimalnya adalah 3200 tweet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/twintproject/twint.git
+<span class="o">%</span><span class="k">cd</span> twint
+<span class="o">!</span>pip3 install . -r requirements.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cloning into &#39;twint&#39;...
+remote: Enumerating objects: 47, done.
+remote: Counting objects: 100% (47/47), done.
+remote: Compressing objects: 100% (44/44), done.
+remote: Total 47 (delta 3), reused 14 (delta 0), pack-reused 0
+Unpacking objects: 100% (47/47), done.
+/content/drive/MyDrive/web_mining/web_Mining/twint
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Processing /content/drive/MyDrive/web_mining/web_Mining/twint
+<span class=" -Color -Color-Yellow">  DEPRECATION: A future pip version will change local packages to be built in-place without first copying to a temporary directory. We recommend you use --use-feature=in-tree-build to test your packages with this new behavior before it becomes the default.</span>
+<span class=" -Color -Color-Yellow">   pip 21.3 will remove support for this functionality. You can find discussion regarding this at https://github.com/pypa/pip/issues/7555.</span>
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 1)) (3.8.3)
+Collecting aiodns
+  Downloading aiodns-3.0.0-py3-none-any.whl (5.0 kB)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 3)) (4.6.3)
+Collecting cchardet
+  Downloading cchardet-2.1.7-cp37-cp37m-manylinux2010_x86_64.whl (263 kB)
+     |████████████████████████████████| 263 kB 11.8 MB/s 
+?25hCollecting dataclasses
+  Downloading dataclasses-0.6-py3-none-any.whl (14 kB)
+Collecting elasticsearch
+  Downloading elasticsearch-8.5.2-py3-none-any.whl (385 kB)
+     |████████████████████████████████| 385 kB 55.9 MB/s 
+?25hRequirement already satisfied: pysocks in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 7)) (1.7.1)
+Requirement already satisfied: pandas&gt;=0.23.0 in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 8)) (1.3.5)
+Collecting aiohttp_socks&lt;=0.4.1
+  Downloading aiohttp_socks-0.4.1-py3-none-any.whl (17 kB)
+Collecting schedule
+  Downloading schedule-1.1.0-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: geopy in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 11)) (1.17.0)
+Collecting fake-useragent
+  Downloading fake_useragent-1.1.0-py3-none-any.whl (50 kB)
+     |████████████████████████████████| 50 kB 5.8 MB/s 
+?25hCollecting googletransx
+  Downloading googletransx-2.4.2.tar.gz (13 kB)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.21.6)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2.8.2)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2022.6)
+Requirement already satisfied: attrs&gt;=19.2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp_socks&lt;=0.4.1-&gt;-r requirements.txt (line 9)) (22.1.0)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.3.3)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.3.1)
+Requirement already satisfied: asynctest==0.13.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (0.13.0)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (4.0.2)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.8.1)
+Requirement already satisfied: charset-normalizer&lt;3.0,&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (2.1.1)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (6.0.2)
+Requirement already satisfied: typing-extensions&gt;=3.7.4 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (4.1.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.7/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;-r requirements.txt (line 1)) (2.10)
+Collecting pycares&gt;=4.0.0
+  Downloading pycares-4.2.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
+     |████████████████████████████████| 288 kB 56.8 MB/s 
+?25hRequirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.7/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (1.15.1)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.7/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (2.21)
+Collecting elastic-transport&lt;9,&gt;=8
+  Downloading elastic_transport-8.4.0-py3-none-any.whl (59 kB)
+     |████████████████████████████████| 59 kB 6.7 MB/s 
+?25hRequirement already satisfied: certifi in /usr/local/lib/python3.7/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (2022.9.24)
+Collecting urllib3&lt;2,&gt;=1.26.2
+  Downloading urllib3-1.26.13-py2.py3-none-any.whl (140 kB)
+     |████████████████████████████████| 140 kB 66.6 MB/s 
+?25hRequirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.7/dist-packages (from geopy-&gt;-r requirements.txt (line 11)) (1.52)
+Requirement already satisfied: importlib-metadata~=4.0 in /usr/local/lib/python3.7/dist-packages (from fake-useragent-&gt;-r requirements.txt (line 12)) (4.13.0)
+Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.7/dist-packages (from fake-useragent-&gt;-r requirements.txt (line 12)) (5.10.0)
+Requirement already satisfied: zipp&gt;=0.5 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata~=4.0-&gt;fake-useragent-&gt;-r requirements.txt (line 12)) (3.10.0)
+Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from googletransx-&gt;-r requirements.txt (line 13)) (2.23.0)
+Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;googletransx-&gt;-r requirements.txt (line 13)) (3.0.4)
+Collecting requests
+  Downloading requests-2.28.1-py3-none-any.whl (62 kB)
+     |████████████████████████████████| 62 kB 1.2 MB/s 
+?25hBuilding wheels for collected packages: twint, googletransx
+  Building wheel for twint (setup.py) ... ?25l?25hdone
+  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38870 sha256=ec3b98a8efd3b504225e32c5f56b6c9d9adcee12f29a1112b21872fc279e457e
+  Stored in directory: /tmp/pip-ephem-wheel-cache-vqgo5li3/wheels/32/e7/72/f637d8e3152680eb550bafea6ea8ade51831260bbc1ba9708d
+  Building wheel for googletransx (setup.py) ... ?25l?25hdone
+  Created wheel for googletransx: filename=googletransx-2.4.2-py3-none-any.whl size=15968 sha256=4956b84a03590b0da136b1883e0c0fdb8a2dca654fbf83c55a6513b446f207c9
+  Stored in directory: /root/.cache/pip/wheels/66/d5/b1/31104b338f7fd45aa8f7d22587765db06773b13df48a89735f
+Successfully built twint googletransx
+Installing collected packages: urllib3, requests, pycares, elastic-transport, schedule, googletransx, fake-useragent, elasticsearch, dataclasses, cchardet, aiohttp-socks, aiodns, twint
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 1.24.3
+    Uninstalling urllib3-1.24.3:
+      Successfully uninstalled urllib3-1.24.3
+  Attempting uninstall: requests
+    Found existing installation: requests 2.23.0
+    Uninstalling requests-2.23.0:
+      Successfully uninstalled requests-2.23.0
+Successfully installed aiodns-3.0.0 aiohttp-socks-0.4.1 cchardet-2.1.7 dataclasses-0.6 elastic-transport-8.4.0 elasticsearch-8.5.2 fake-useragent-1.1.0 googletransx-2.4.2 pycares-4.2.2 requests-2.28.1 schedule-1.1.0 twint-2.1.21 urllib3-1.26.13
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install nest-asyncio
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting nest-asyncio
+  Downloading nest_asyncio-1.5.6-py3-none-any.whl (5.2 kB)
+Installing collected packages: nest-asyncio
+Successfully installed nest-asyncio-1.5.6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install <span class="nv">aiohttp</span><span class="o">==</span><span class="m">3</span>.7.0
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting aiohttp==3.7.0
+  Downloading aiohttp-3.7.0-cp37-cp37m-manylinux2014_x86_64.whl (1.3 MB)
+     |████████████████████████████████| 1.3 MB 15.3 MB/s 
+?25hRequirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (22.1.0)
+Collecting async-timeout&lt;4.0,&gt;=3.0
+  Downloading async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (6.0.2)
+Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (3.0.4)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (1.8.1)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (2.10)
+Requirement already satisfied: typing-extensions&gt;=3.7.4 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (4.1.1)
+Installing collected packages: async-timeout, aiohttp
+  Attempting uninstall: async-timeout
+    Found existing installation: async-timeout 4.0.2
+    Uninstalling async-timeout-4.0.2:
+      Successfully uninstalled async-timeout-4.0.2
+  Attempting uninstall: aiohttp
+    Found existing installation: aiohttp 3.8.3
+    Uninstalling aiohttp-3.8.3:
+      Successfully uninstalled aiohttp-3.8.3
+Successfully installed aiohttp-3.7.0 async-timeout-3.0.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span> <span class="c1">#digunakan sekali untuk mengaktifkan tindakan serentak dalam notebook jupyter.</span>
+<span class="kn">import</span> <span class="nn">twint</span> <span class="c1">#untuk import twint</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;prabowo&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Pandas</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Limit</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1597676920128561153 2022-11-29 19:40:35 +0000 &lt;KingGaseng&gt; Iki nek ra draw buakalane perang dunia 3
+1597676463473315840 2022-11-29 19:38:46 +0000 &lt;BocahArusBawah&gt; Dengan gambaran ini saja jika @ganjarpranowo bergandengan maju bersama @prabowo , bisa dipastikan PILPRES 2024 hanya 1 putaran meraup 58% dan dimenangkan @ganjarpranowo @prabowo  https://t.co/lKgFG5zpIr
+1597674849069330433 2022-11-29 19:32:22 +0000 &lt;jQjIWj61LkKxOYF&gt; Kayaknya @prabowo juga masuk dalam sebutan...?
+1597674690373615616 2022-11-29 19:31:44 +0000 &lt;PuguhAjiPrabowo&gt; lagi dan lagi aku dicintai seorang wanita sedih gue.. gue tu males cinta cintaan... nikah juga males kalau ngewek hayuuukk 🤣
+1597674310747172864 2022-11-29 19:30:13 +0000 &lt;icallaci88&gt; @Miduk17 Prabowo DI BAWAH ganjar nih ceritanya bong ??   @prabowo @Gerindra
+1597674262831443968 2022-11-29 19:30:02 +0000 &lt;WartaEkonomi&gt; Jokowi Sudah Pastikan: Saya Cek Pak Prabowo, Kerutan Wajahnya Ada, Rambutnya Juga Ada Putihnya  https://t.co/FCP1ivJgdw
+1597674038528159745 2022-11-29 19:29:08 +0000 &lt;Otakuntilanak48&gt; Oshimen Sendy Ariani JKT48, Fav Song Temodemo no Namida, #SFK48
+1597673606217355264 2022-11-29 19:27:25 +0000 &lt;moh_aak&gt; @soen_cak @seruanhl @ganjarpranowo Pasti klo pak ganjar  Anes jadi 0% Prabowo juga 0%
+1597671530758303744 2022-11-29 19:19:10 +0000 &lt;santaliaa&gt; @Gerindra @smbdyto_u @tanyarlfes @prabowo 😭😭
+1597670296152342528 2022-11-29 19:14:16 +0000 &lt;Dakjal888&gt; @JParidjal @ziezie84187091 @BosPurwa Potong telinga gue kalo Anis Bisa sampe jadi bacalon, jangan mimpi ngarep mau ke RI. Bacalon aja gk bisa 😂  Pak Ganjar lu main lawan? Lawan dulu elektabilitas pak Prabowo 😁  Gk ada ruang buat Yaman Dan ARAB RADIKAL di Indo ya Kadrun!   PRESIDEN HARUS 100% PRIBUMI !!!🥰
+1597669984137715712 2022-11-29 19:13:02 +0000 &lt;WulandaPrabowo&gt; Panasnyaa gilaaaa..butuh penyejuk,apalagi penyejuk hati aku,kamuu :)
+1597669885899083776 2022-11-29 19:12:38 +0000 &lt;CryptoKang&gt; @AndiSinulingga @jokowi GANJAR PRABOWO itu dah paling benar
+1597667980321894400 2022-11-29 19:05:04 +0000 &lt;TimorSabiru&gt; @BoyRembaya @PartaiSocmed @aniesbaswedan Lah itu strateginya, kasih php sama semua calon. Biar semua pada menjilat pantat jokowi.  Yang paling ngebet dan penasaran sih kayaknya prabowo. Nyalon ketiga kali pasti dia bakal keluarin modal abis²an 🤭
+1597666171007823872 2022-11-29 18:57:53 +0000 &lt;agungsyaht_&gt; @tvOneNews sekarang malah ngasih harapan ke Prabowo,hedeh
+1597665820712525824 2022-11-29 18:56:29 +0000 &lt;andiadhye&gt; @prabowo Sy tetap setia mendukungmu pak..meskipun didunia  belum bisa memimpin negeri ini,bahwa sejatinya engkau diselamatkan dari dosa dosa yg ada di bla bla bla
+1597665541329936384 2022-11-29 18:55:22 +0000 &lt;BossToukeeIsa&gt; @FirzaHusainID Berapa besar kemungkinan menang jika pasangan capres-cawapres 2024 nanti  @puanmaharani_ri - @erickthohir  atau @erickthohir - @ganjarpranowo bisa juga @prabowo - @erickthohir  ????
+1597664647112404992 2022-11-29 18:51:49 +0000 &lt;princesdisnep&gt; @prabowo Bobby cayankkk
+1597663618215997440 2022-11-29 18:47:44 +0000 &lt;9164Wahyu&gt; PDIP, Gerinda, PKB, PPP Capres: Prabowo Cawapres: Puan Maharani  Nasdem, Demokrat, PAN, PKS Capres: Anies Baswedan Cawapres: AHY  Golkar, Perindo, Hanura, PSI Capres: Ganjar Pranowo Cawapres: Eric Thohir.
+1597663509579714560 2022-11-29 18:47:18 +0000 &lt;Simanjunta9Nico&gt; Elektabilitas Anies Dipuncak, Eks Ketua Harian Golkar Aceh Utara: Rakyat Menaruh Harapan Besar.  “Ini hal yang wajar karena hanya Anies yang dapat momentum politik, Prabowo masih biasa-biasa saja, meskipun dia sudah mengumumkan capres dari Gerindra.”    https://t.co/oJPb29xM7w
+1597663377513680896 2022-11-29 18:46:47 +0000 &lt;bulbulbulan&gt; @Miduk17 Duh aku team Pak Prabowo, pls pls Pak Prabowo dong jd presiden 2024 😭🙏🏽
+1597663255983312896 2022-11-29 18:46:18 +0000 &lt;bowlink1997&gt; @SyafarSik68 @jokowi Lha kan Prabowo Ganjar satu jatah presiden satunya jatah wakil presiden
+1597663155442036736 2022-11-29 18:45:54 +0000 &lt;ArifudinNur71&gt; Ini baru Survei yang benar, masa Prabowo Ketua Partai di simpan di urutan ke 3, dasar kelakuan Kadrun.
+1597662447967801344 2022-11-29 18:43:05 +0000 &lt;WulandaPrabowo&gt; Jupe aja yang gedenya sebaskom tiwul ditinggalin, apalagi gue. :(
+1597660781331767301 2022-11-29 18:36:28 +0000 &lt;Andes_1976&gt; @RobbyHaneur Sadarlah, Rakyat blum Lupa sejarah, SBY/JK Mundur dri Kabinet Mega,  Politik memang Kejam  Mega yg angkat harkat SBY, Prabowo yg Angkat Harkat Anis  Jdi Paham yah ???
+1597660195647545346 2022-11-29 18:34:08 +0000 &lt;Reilly_Prabowo&gt; @LullabyWeb3 Done
+1597659698052071425 2022-11-29 18:32:09 +0000 &lt;Andes_1976&gt; @Relawananies Survey di rumah saya 50% 50 %  Dri 4 Koresponden Yg Dua Prabowo Yg Dua Ganjar  Itu hak dri Kami satu Rumah ( Demokrasi ), Ayah, Ibu dan Anak 2
+1597659519257305091 2022-11-29 18:31:27 +0000 &lt;WigitBale1&gt; @roestanto_ @catchmeupid Tego tenan kui, sadis
+1597658941923917826 2022-11-29 18:29:09 +0000 &lt;Otakuntilanak48&gt; Anonymous account, Member of #SFK48 #TeamSaveAs #TeamPerusuhRF
+1597658619331633152 2022-11-29 18:27:52 +0000 &lt;YthBapakLuhut&gt; @GerakAnies @msaid_didu Prabowo, yg dua lain banyak buzzernya
+1597658332587732992 2022-11-29 18:26:44 +0000 &lt;mediaonokae&gt; Presiden Jokowi: Sosok Calon Pemimpin Berambut Putih, Sebut Nama Prabowo  https://t.co/XvaVgvUXfY
+1597656934861049856 2022-11-29 18:21:10 +0000 &lt;BPragestu&gt; Prabowo mengatakan persaingan adalah hal yang biasa. Namun, yang terpenting adalah kerukunan. Mending Prabowo  https://t.co/kciwTtkcZ0 dekade08
+1597656933091397632 2022-11-29 18:21:10 +0000 &lt;fitrah_ravi&gt; Hadiri Munas KAHMI, Prabowo Disambut Riuh Para Pekerja Bandara Palu: Presidenku, Rek!. Mending Prabowo  https://t.co/bo0oBl2Ap2 dekade08
+1597656598536933378 2022-11-29 18:19:50 +0000 &lt;MutiaNazha&gt; Menteri Pertahanan RI Prabowo Subianto optimistis Indonesia memiliki masa depan yang baik asal masyarakatnya rukun dan bersatu. Mending Prabowo  https://t.co/3Zx7Pq0f6A dekade08
+1597656553460727808 2022-11-29 18:19:40 +0000 &lt;ruthgrccc&gt; Ketua Umum Partai Gerindra Prabowo Subianto menanggapi pernyataan Presiden Jokowi soal ciri-ciri fisik pemimpin. Mending Prabowo  https://t.co/JVfzEeV9O5 dekade08
+1597656539418230784 2022-11-29 18:19:36 +0000 &lt;DzkyAlif&gt; Ini putih banyak kan, putih,&quot; kata Prabowo sambil menunjukkan kepalanya. Mending Prabowo  https://t.co/KdLqB42t3O dekade08
+1597656502382497792 2022-11-29 18:19:27 +0000 &lt;Cici00793996&gt; @tanyarlfes @prabowo ayok pak ceritain bikin podcast
+1597656456362307584 2022-11-29 18:19:16 +0000 &lt;putri_meylania&gt; Prabowo mengajak masyarakat untuk mengerem sifat suka menjatuhkan kawan sendiri dan saling hujat satu sama lain. Mending Prabowo  https://t.co/sbKCBjzfAJ dekade08
+1597656443557408768 2022-11-29 18:19:13 +0000 &lt;noorisml&gt; “Persaingan itu biasa. Monggo ya kan?.Nanti ada pemilihan bupati, pemilihan ini itu, pilpres. Yang terpenting yang terpilih benar-benar bekerja untuk rakyat,” ujar Prabowo. Mending Prabowo  https://t.co/yYwQQvrseL dekade08
+1597656418395377664 2022-11-29 18:19:07 +0000 &lt;donpratma&gt; “Kita sebetulnya harus bersyukur kita memiliki masa depan yang baik. Asal, ada asalnya apakah kita bisa rukun bersatu atau kita ribut terus?” kata Prabowo. Mending Prabowo  https://t.co/EkimnPsu4U dekade08
+1597656389689610241 2022-11-29 18:19:00 +0000 &lt;FatimaSyahrida&gt; Prabowo optimistis Indonesia memiliki masa depan yang baik asal masyarakatnya rukun dan bersatu. Mending Prabowo  https://t.co/SAtMQfBd66 dekade08
+1597656334006358016 2022-11-29 18:18:47 +0000 &lt;lillyaulia3&gt; Prabowo: Selama Rakyat Bersatu, Tak Ada Negara yang Berani Ganggu Indonesia. Mending Prabowo  https://t.co/0cqPR7dN9p dekade08
+1597656232101576704 2022-11-29 18:18:23 +0000 &lt;VieraEsa&gt; Prabowo pun menyalami satu per satu para pekerja tersebut seraya bertanya asal daerah masing-masing. Mending Prabowo  https://t.co/lDGGa0rf0H dekade08
+1597656220394872832 2022-11-29 18:18:20 +0000 &lt;kahfi_pradana&gt; Menhan Prabowo Subianto menanggapi dengan santai saat ditanya awak media soal pernyataan Presiden Jokowi tentang pemimpin berambut putih. Mending Prabowo  https://t.co/S5AzjPepTE dekade08
+1597656219174699009 2022-11-29 18:18:20 +0000 &lt;SalmaRamania&gt; Saat sampai di bandara, Prabowo dihampiri oleh para pekerja proyek yang bekerja di bandara tersebut dan meminta foto bersama. Mending Prabowo  https://t.co/9Wur1XNILY dekade08
+1597656206981894144 2022-11-29 18:18:17 +0000 &lt;fahira_almira&gt; Prabowo menjadi pembicara dalam Musyawarah Nasional (Munas) ke XI Korps Alumni Himpunan Mahasiswa Islam (KAHMI) di Sriti Convention Hall. Mending Prabowo  https://t.co/hKyFLulLOL dekade08
+1597656165944815616 2022-11-29 18:18:07 +0000 &lt;BellaCatrina1&gt; Prabowo menyebutkan dirinya dan PPDI adalah sahabat, sejak tahun 2014 menjabat sebagai ketua umum HKTI Prabowo dan PPDI mendorong lahirnya program 1 milyar 1 desa. Mending Prabowo  https://t.co/WN9TY9mO92 dekade08
+1597656165240176640 2022-11-29 18:18:07 +0000 &lt;ASaerong&gt; Prabowo menyebut, kesepakatan dan persetujuan RUU tersebut diambil dalam Rapat Kerja Komisi I DPR RI-Menhan RI yang digelar secara tertutup. Mending Prabowo  https://t.co/2UsJokmZsy dekade08
+1597656160580284417 2022-11-29 18:18:06 +0000 &lt;hudaprasetyo12&gt; Deni menjelaskan, sekitar 95 persen warga mengaku tahu, kenal atau pernah mendengar nama Prabowo. Mending Prabowo  https://t.co/bGQIdOiKAx dekade08
+1597656138429800449 2022-11-29 18:18:01 +0000 &lt;ArkanAzinudin&gt; Direktur Riset SRMC, Deni Irvani, menyebut Ketua Umum Gerindra Prabowo Subianto tampil sebagai tokoh calon presiden (capres) paling populer. Mending Prabowo  https://t.co/RQmnfI9Tc6 dekade08
+1597656083581243392 2022-11-29 18:17:47 +0000 &lt;GhaisaniMalita&gt; Prabowo optimistis kedai kopinya bakal laris didatangi pengunjung. Namun, eks Danjen Kopassus ini tidak yakin akan untung atau buntung. Mending Prabowo  https://t.co/dAkXzU6P7L dekade08
+1597656061997068288 2022-11-29 18:17:42 +0000 &lt;yoga_nugrh&gt; &quot;Ini hampir dua jam saya bicara ini. Minum kopi dulu, ya, boleh?&quot; Saya nanti kalau pensiun mau buka warung kopi,&quot; kata Prabowo. Mending Prabowo  https://t.co/BWWkmFKCYP dekade08
+1597656048411680768 2022-11-29 18:17:39 +0000 &lt;IntanArsita2&gt; Hadiri Mukernas PPDI, Prabowo Minta Perangkat Desa Terus Jaga Kerukunan. Mending Prabowo  https://t.co/RmZenGxJpU dekade08
+1597656032528175104 2022-11-29 18:17:35 +0000 &lt;mutualanngezzz&gt; @3dogawaa @smbdyto_u @tanyarlfes @Gerindra @prabowo Wkwkwk panikkk
+1597656028958818304 2022-11-29 18:17:34 +0000 &lt;BaskoroRetno&gt; Menteri Pertahanan (Menhan) Prabowo Subianto menjadi keynote speaker di salah satu sesi IdeaTalks dalam acara IdeaFest 2022. Mending Prabowo  https://t.co/57hO73bI6Y dekade08
+1597656023510134785 2022-11-29 18:17:33 +0000 &lt;ChrinYulita&gt; Jokowi sempat menyebut Pilpres 2024 merupakan giliran Prabowo untuk memenangkannya. Mending Prabowo  https://t.co/gvYNxTKzMm dekade08
+1597655990132146176 2022-11-29 18:17:25 +0000 &lt;sasqia_radaulii&gt; Prabowo Ingin Buka Coffee Shop saat Pensiun. Mending Prabowo  https://t.co/QWNG9QUDA3 dekade08
+1597655969781407744 2022-11-29 18:17:20 +0000 &lt;BungaAnindyaa&gt; Dibagikan juga buku Paradoks Indonesia dan kepimpinan militer catatan pengalaman Prabowo Subianto kepada ratusan perangkat desa yang mengukuti mukernas, rakernas dan rapimnas PPDI. Mending Prabowo  https://t.co/8VUvOtJpjl dekade08
+1597655963498344449 2022-11-29 18:17:19 +0000 &lt;HHasyima&gt; &quot;Yang tidak setuju dengan perjuangan partai, mempertahankan Pancasila dan UUD 1945 dan NKRI silakan mencari partai lain,&quot; kata Prabowo. Mending Prabowo  https://t.co/d4k3rRmULA dekade08
+1597655951150002176 2022-11-29 18:17:16 +0000 &lt;YoanaNatalia5&gt; Tanggapi soal Pemimpin Rambut Putih, Prabowo Tunjuk Kepalanya: Ini Banyak kan. Mending Prabowo  https://t.co/ulU16QzgGt dekade08
+1597655935753019392 2022-11-29 18:17:12 +0000 &lt;LisaTrianda&gt; &quot;Program itu membuat rakyat bangkit dan peredaran uang banyak di Indonesia tidak lagi mengalir keluar negeri,&quot; kata Prabowo. Mending Prabowo  https://t.co/127c9BXMtf dekade08
+1597655901585887233 2022-11-29 18:17:04 +0000 &lt;DesiSyahdila&gt; &quot;Mari kita jaga kerukunan, kompak dan memihara kesejukan,&quot; kata Prabowo. Mending Prabowo  https://t.co/NuM11t7sRG dekade08
+1597655897261498368 2022-11-29 18:17:03 +0000 &lt;PangkeySheila&gt; Prabowo menyampaikan, sembilan fraksi di DPR telah menyetujui RUU itu untuk dibahas ke Tingkat II dalam Sidang Paripurna DPR RI untuk disahkan menjadi Undang Undang. Mending Prabowo  https://t.co/0aYKSpb4ha dekade08
+1597655881034117120 2022-11-29 18:16:59 +0000 &lt;DeniHasibuan5&gt; &quot;Untuk memperkuat hubungan bilateral dengan kedua negara juga membuka kesempatan dan meningkatkan kerja sama di bidang pertahanan serta berimplikasi positif pada aspek politik,&quot;. Mending Prabowo  https://t.co/05l1CsK1I6 dekade08
+1597655880895721473 2022-11-29 18:16:59 +0000 &lt;MaulindaWita&gt; Menteri Pertananan RI, Prabowo Subianto menghadiri langsung penutupan musyawarah kerja nasional, rapat kerja nasional dan rapat pimpinan nasional PPDI. Mending Prabowo  https://t.co/dfQWZT1DcO dekade08
+1597655859425083392 2022-11-29 18:16:54 +0000 &lt;GitaYudistia&gt; Menhan Prabowo menyebutkan dirinya dan PPDI adalah bersahabat dalam mendorong lahirnya program 1 milyar 1 desa. Mending Prabowo  https://t.co/Zz0O4BfQc7 dekade08
+1597655838306336768 2022-11-29 18:16:49 +0000 &lt;GinaLolita5&gt; Prabowo menyebutkan, agar menjaga kerukunan, kompak dan memihara kesejukan. Mending Prabowo  https://t.co/DfpwNTDXH1 dekade08
+1597655820103450624 2022-11-29 18:16:45 +0000 &lt;AmarossaD&gt; Jokowi mempersilakan pernyataannya itu diartikan sebagai sebuah sinyal dukungan ke Prabowo Subianto. Mending Prabowo  https://t.co/uIJ9ZCXCm2 dekade08
+1597655818056318976 2022-11-29 18:16:44 +0000 &lt;glen_wiliam&gt; Menteri Pertahanan RI, Prabowo Subianto menghadiri musyawarah kerja nasinal dan rapat kerja nasional Persatuan Perangkat Desa Indonesia (PPDI). Mending Prabowo  https://t.co/e7HZcGfNok dekade08
+1597655749966319617 2022-11-29 18:16:28 +0000 &lt;ErmanBenho&gt; Prabowo meresponsnya dengan tertawa dan menunjuk rambutnya yang sudah memutih sebagian. Mending Prabowo  https://t.co/lxJHPTAk0V dekade08
+1597655737278136320 2022-11-29 18:16:25 +0000 &lt;AngelaJantz8&gt; Menteri Pertahanan (Menhan) Prabowo Subianto pun menanggapi dengan santai saat ditanya awak media soal pernyataan Jokowi itu. Mending Prabowo  https://t.co/ItVQGhIO1y dekade08
+1597655728478507009 2022-11-29 18:16:23 +0000 &lt;RYashleena&gt; Bolak-balik Jokowi Dukung Prabowo dan Ganjar via Kode Politik. Mending Prabowo  https://t.co/84RYfKlLMb dekade08
+1597655694290743297 2022-11-29 18:16:15 +0000 &lt;fadila_fardan&gt; Prabowo mengapresiasi dukungan Prancis selama Indo Defence 2022 Expo and Forum. Mending Prabowo  https://t.co/LLvDxcLGLx dekade08
+1597655682815528961 2022-11-29 18:16:12 +0000 &lt;RiyukaB&gt; &quot;Agenda Rapat ini terdiri dari sesi pembahasan, sesi pengambilan keputusan dan diakhiri dengan penandatanganan naskah RUU dan penjelasan,&quot; jelas Prabowo. Mending Prabowo  https://t.co/9Fnvey43Uz dekade08
+1597655595317809152 2022-11-29 18:15:51 +0000 &lt;ErikaKarlina2&gt; Menteri Pertahanan Menhan RI Prabowo Subianto menyampaikan bahwa saat ini Indonesia tengah mewaspadai kondisi politik dunia karena penuh ketidakpastian. Mending Prabowo  https://t.co/GO0P0ydOAH dekade08
+1597655593954971648 2022-11-29 18:15:51 +0000 &lt;BunaoJustel&gt; Menteri Pertahanan Republik Indonesia Prabowo Subianto bersama Komisi I DPR RI menyetujui dua Rancangan Undang-Undang (RUU) Tentang Kerja Sama Bidang Pertahanan. Mending Prabowo  https://t.co/sCArO6inS7 dekade08
+1597655581640208385 2022-11-29 18:15:48 +0000 &lt;AnandaPut10&gt; Prabowo dan DPR Sepakati RUU Kerja Sama Pertahanan RI dengan Singapura-Fiji. Mending Prabowo  https://t.co/zU9hxYE9qe dekade08
+1597655548014755840 2022-11-29 18:15:40 +0000 &lt;syabirulla&gt; Jokowi mengatakan setelah ini kemungkinan Pilpres 2024 jatahnya Ketua Umum Partai Gerindra Prabowo Subianto yang merupakan rivalnya di dua pilpres sebelumnya. Mending Prabowo  https://t.co/fEsf4OiM1t dekade08
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_dfs</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">panda</span><span class="o">.</span><span class="n">Tweets_df</span>
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0              Iki nek ra draw buakalane perang dunia 3
+1     Dengan gambaran ini saja jika @ganjarpranowo b...
+2        Kayaknya @prabowo juga masuk dalam sebutan...?
+3     lagi dan lagi aku dicintai seorang wanita sedi...
+4     @Miduk17 Prabowo DI BAWAH ganjar nih ceritanya...
+                            ...                        
+72    &quot;Agenda Rapat ini terdiri dari sesi pembahasan...
+73    Menteri Pertahanan Menhan RI Prabowo Subianto ...
+74    Menteri Pertahanan Republik Indonesia Prabowo ...
+75    Prabowo dan DPR Sepakati RUU Kerja Sama Pertah...
+76    Jokowi mengatakan setelah ini kemungkinan Pilp...
+Name: tweet, Length: 77, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;prabowo.csv&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">files</span> 
+<span class="c1">#files.download(&#39;prabowo.csv&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/javascript">
+    async function download(id, filename, size) {
+      if (!google.colab.kernel.accessAllowed) {
+        return;
+      }
+      const div = document.createElement('div');
+      const label = document.createElement('label');
+      label.textContent = `Downloading "${filename}": `;
+      div.appendChild(label);
+      const progress = document.createElement('progress');
+      progress.max = size;
+      div.appendChild(progress);
+      document.body.appendChild(div);
+
+      const buffers = [];
+      let downloaded = 0;
+
+      const channel = await google.colab.kernel.comms.open(id);
+      // Send a message to notify the kernel that we're ready.
+      channel.send({})
+
+      for await (const message of channel.messages) {
+        // Send a message to notify the kernel that we're ready.
+        channel.send({})
+        if (message.buffers) {
+          for (const buffer of message.buffers) {
+            buffers.push(buffer);
+            downloaded += buffer.byteLength;
+            progress.value = downloaded;
+          }
+        }
+      }
+      const blob = new Blob(buffers, {type: 'application/binary'});
+      const a = document.createElement('a');
+      a.href = window.URL.createObjectURL(blob);
+      a.download = filename;
+      div.appendChild(a);
+      a.click();
+      div.remove();
+    }
+  </script><script type="application/javascript">download("download_9c056161-8b6c-4bc1-9080-530313143ce3", "prabowo.csv", 11461)</script></div>
+</div>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mengambil-data">
+<h1><strong>Mengambil Data</strong><a class="headerlink" href="#mengambil-data" title="Permalink to this headline">#</a></h1>
+<p>Proses ini digunakan untuk mengambil 100 data tweet yang telah disimpan dalam github dengan format .csv</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -498,19 +813,12 @@ with your book. For more information about this, see <a class="reference externa
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="markdown.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Markdown Files</p>
+            <p class="prev-next-title">Welcome to your Jupyter Book</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="markdown-notebooks.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
