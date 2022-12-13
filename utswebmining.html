@@ -1,0 +1,1581 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>UTS WEB MINING &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Data crawling" href="notebooks.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Tentang Buku
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   <strong>
+    Data crawling
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <strong>
+    UTS WEB MINING
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/utswebmining.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Futswebmining.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/utswebmining.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <strong>
+    UTS WEB MINING
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analisa-clustering-dengan-menggunakan-k-mean">
+   1. Analisa Clustering dengan menggunakan K-Mean
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-crawling">
+   <strong>
+    Data crawling
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#twint">
+     Twint
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengambil-data">
+   <strong>
+    Mengambil Data
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-folding">
+   <em>
+    Case Folding
+   </em>
+   *
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menghapus-karakter-spesial">
+     Menghapus Karakter Spesial
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menghapus-angka">
+     Menghapus Angka
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menghapus-tanda-baca">
+     Menghapus Tanda Baca
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menghapus-spasi">
+     Menghapus Spasi
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menghapus-huruf">
+     Menghapus huruf
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tokenizing">
+   <strong>
+    Tokenizing
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering-stopwords-removal">
+   <strong>
+    Filtering(Stopwords Removal)
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stemming">
+   <strong>
+    Stemming
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tf">
+   <strong>
+    TF
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#peringkasan-berita">
+   2. Peringkasan Berita
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kmeans">
+   KMeans
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meringkas-dokumen">
+   <strong>
+    MERINGKAS DOKUMEN
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menjalankan-script-scrapy">
+     <strong>
+      Menjalankan Script Scrapy
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-hasil">
+     <strong>
+      Import Hasil
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Case Folding
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vectorization">
+       Vectorization
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cosine-similarity">
+       Cosine Similarity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membangun-graph">
+     Membangun Graph
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pagerank">
+     Pagerank
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hasil-dan-perbandingan">
+       Hasil dan perbandingan
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>UTS WEB MINING</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <strong>
+    UTS WEB MINING
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analisa-clustering-dengan-menggunakan-k-mean">
+   1. Analisa Clustering dengan menggunakan K-Mean
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-crawling">
+   <strong>
+    Data crawling
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#twint">
+     Twint
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengambil-data">
+   <strong>
+    Mengambil Data
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-folding">
+   <em>
+    Case Folding
+   </em>
+   *
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menghapus-karakter-spesial">
+     Menghapus Karakter Spesial
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menghapus-angka">
+     Menghapus Angka
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menghapus-tanda-baca">
+     Menghapus Tanda Baca
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menghapus-spasi">
+     Menghapus Spasi
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menghapus-huruf">
+     Menghapus huruf
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tokenizing">
+   <strong>
+    Tokenizing
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering-stopwords-removal">
+   <strong>
+    Filtering(Stopwords Removal)
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stemming">
+   <strong>
+    Stemming
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tf">
+   <strong>
+    TF
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#peringkasan-berita">
+   2. Peringkasan Berita
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kmeans">
+   KMeans
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meringkas-dokumen">
+   <strong>
+    MERINGKAS DOKUMEN
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menjalankan-script-scrapy">
+     <strong>
+      Menjalankan Script Scrapy
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-hasil">
+     <strong>
+      Import Hasil
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Case Folding
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vectorization">
+       Vectorization
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cosine-similarity">
+       Cosine Similarity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membangun-graph">
+     Membangun Graph
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pagerank">
+     Pagerank
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hasil-dan-perbandingan">
+       Hasil dan perbandingan
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="uts-web-mining">
+<h1><strong>UTS WEB MINING</strong><a class="headerlink" href="#uts-web-mining" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from google.colab import drive</span>
+<span class="c1"># drive.mount(&#39;/content/drive&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %cd /content/drive/MyDrive/web_mining/</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="analisa-clustering-dengan-menggunakan-k-mean">
+<h1>1. Analisa Clustering dengan menggunakan K-Mean<a class="headerlink" href="#analisa-clustering-dengan-menggunakan-k-mean" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-crawling">
+<h1><strong>Data crawling</strong><a class="headerlink" href="#data-crawling" title="Permalink to this headline">#</a></h1>
+<p>Data crawling atau perayapan data adalah proses pengambilan data yang tersedia secara online untuk umum. Proses ini kemudian mengimpor informasi atau data yang telah ditemukan ke dalam file lokal di komputer Anda.</p>
+<section id="twint">
+<h2>Twint<a class="headerlink" href="#twint" title="Permalink to this headline">#</a></h2>
+<p>Twint adalah sebuah tools yang digunakan untuk melakukan scrapping dari aplikasi twitter yang disetting secara khusus menggunakan bahasa pemrograman Python. Twint dapat kita gunakan dan jalankan tanpa harus menggunakan API dari Twitter itu sendiri, dengan kapasitas scrapping data maksimalnya adalah 3200 tweet.</p>
+<p>Bukan hanya digunakan pada tweet, twint juga bisa kita gunakan untuk melakukan scrapping pada user, followers, retweet dan sebagainya. Twint memanfaatkan operator pencarian twitter untuk memungkinkan proses penghapusan tweet dari user tertentu, memilih dan memilah informasi-informasi yang sensitif, termasuk email dan nomor telepon di dalamnya.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !git clone --depth=1 https://github.com/twintproject/twint.git</span>
+<span class="c1"># %cd twint</span>
+<span class="c1"># !pip3 install -r requirements.txt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install nest-asyncio</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install aiohttp==3.7.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span> <span class="c1">#digunakan sekali untuk mengaktifkan tindakan serentak dalam notebook jupyter.</span>
+<span class="kn">import</span> <span class="nn">twint</span> <span class="c1">#untuk import twint</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;tragedi Kanjuruhan&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Pandas</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Limit</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ModuleNotFoundError</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">4</span><span class="n">c503b1aeb97</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span> <span class="c1">#digunakan sekali untuk mengaktifkan tindakan serentak dalam notebook jupyter.</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">twint</span> <span class="c1">#untuk import twint</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;tragedi Kanjuruhan&#39;</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;twint&#39;
+
+<span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NOTE</span>: If your import is failing due to a missing package, you can
+<span class="n">manually</span> <span class="n">install</span> <span class="n">dependencies</span> <span class="n">using</span> <span class="n">either</span> <span class="o">!</span>pip or !apt.
+
+<span class="n">To</span> <span class="n">view</span> <span class="n">examples</span> <span class="n">of</span> <span class="n">installing</span> <span class="n">some</span> <span class="n">common</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">click</span> <span class="n">the</span>
+<span class="s2">&quot;Open Examples&quot;</span> <span class="n">button</span> <span class="n">below</span><span class="o">.</span>
+<span class="gt">---------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_dfs</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">panda</span><span class="o">.</span><span class="n">Tweets_df</span>
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0                                                                                                                                                                                                 @iIhamzada Alhamdulillah udah gak pernah nonton lagi semenjak tragedi kanjuruhan, doakan semoga saya konsisten dan istiqomah 🙏
+1                   @parkbyunhe @byunkags Dari kmren nih gw liat sring bgt ada akun lokal yg tiba2 salpak ngedrag idol lain bawa2 BTS ARMY atau bandingin idol lain, eh pas kbukti trnyta bukan army. Owh iya yg thread lexxi itu ya fitnah army, tntg tragedi kanjuruhan ampe brapa ribu ya yg ngelike trnyta kbukti bukan army
+2                                                                                                                                                                         @Indostransfer @pt_lib Tragedi kanjuruhan aja gak tanggunjawab apalagi soal ini, udah bosen protes terus soal kenerja federasi dan perangkatnya, capek
+3                                                                                                                                                                                      Pikiran Suporter (Podcast) X Tobias Ginanjar &quot;Liga 1 Berjalan, Jangan Lupakan Tragedi Kanjuruhan&quot;    https://t.co/KXj5sMKuaI via @YouTube
+4                                                     Ketua pssi jatim yg tdk.mampu mengulirkan liga 3 zona jatim, ketua komite wasit yg kinerja wasit akhir2 ini kebacut, maringene nyalon waketum pssi, tragedi kanjuruhan paling bersuara gawe pssi. Lek mene milih wong iki, gk usah protes didzolimi maneh @persebayaupdate
+5                                                                                                                          Pikiran Suporter (Podcast) X Tobias Ginanjar &quot;Liga 1 Berjalan, Jangan Lupakan Tragedi Kanjuruhan&quot;  @toptobs @v_frontline_pc @officialvpc LINK LIVE:  https://t.co/KXj5sMKuaI  https://t.co/f98KXaezHa
+6                                                                                                                                                                                                        Tim Hukum Aremania Desak Polisi Rekonstruksi Ulang Tragedi Kanjuruhan  https://t.co/LycTtsa4HN  https://t.co/mv1eEd7CyR
+7                                                                                                                                                                                                                                                                               @Fandom_ID yang ga bakal lupa tragedi kanjuruhan
+8                                                                                                                                                       @zenrs Masih banyak yang percaya kalau Tragedi Kanjuruhan terjadi hanya karena pitch invasion mas. Ya gpp. Itu pilihan mereka.  #UsutTuntasTragediKanjuruhan #UsutTuntas
+9                                                                                                                                                          @AlionelMessi_ Menghabisi persebaya. Penyebab tragedi kanjuruhan . Menurut mereka 🤣 coba aja persebaya ga menang ga ada korban. Begitulah mungkin cara pandang mereka
+10                                                                       Sempet bingung kenapa liga dilanjutkan tanpa penonton setelah tragedi kanjuruhan. Ternyata LIB mengambil langkah yang tepat, nek liga dilanjutkan dengan penonton wasit wasit mereka yang gobloknya konsisten ini wes jelas diuber sak stadion. Salut👏🏻
+11                                                                                                                                                    @nazmiwhyarm @idextratime Apa gunanya kemarin Lobby FIFA agar gak kena sanksi gara2 tragedi Kanjuruhan harusnya itu momentum pas buat bersih2 sampah d sepakbola Indonesia
+12                                                                                                                                                                               @The_RedsIndo Sejak tragedi Kanjuruhan ga mau nonton di TV atau streaming Vidio. Tanpa penonton bukannya tambah bener, malah makin semena-mena😅
+13                                                                                                                                                                                                       Tragedi Kanjuruhan belum selesai tp liga dilanjutkan aja udah aneh. Jangan heran kalo banyak keanehan lain di dalamnya.
+14                                                                                                                                                                                                                   @Fandom_ID Teu ngaruh kitu nya ku tragedi kanjuruhan?haneut keneh 😂  Assalamualaikum ya akhi ya ukhti @PSSI
+15                                      Gak kaget. Kanjuruhan itu test case ke sekian. Untuk tragedi sebesar itu aja bisa dibiarkan selow2 aja, maka urusan wasit yg dari lama gak beres ini juga akan terus ada pembiaran.  Apalagi Persebaya vokal banget. Opo dipikir kroni2 PSSI akan membiarkan Persebaya enak2an? Y ga lah
+16                                                                          @Aazi_ Lah bubble system itu bukannya bentuk evaluasi tragedi sepakbola Kanjuruhan? Main malem jadi pemicu chaos kalau ada penonton langsung, kalau gak ada penonton ya oke oke aja. Siapa tau setelah bubble system, gak akan ada match jam segitu.
+17                                                Ketua Tim Advokasi Aremania Menggugat Sesalkan Pembongkaran Stadion.  Ketua Tim Advokasi Bantuan Hukum Aremania Menggugat yang tergabung dalam Sekretaris Bersama (Sekber), Djoko…  https://t.co/2mIAfLJAIY #Olahraga #Aremania #Malang #TragediKanjuruhan via @beritajatimcom
+18                                                                                                                                                                                                                           Lo kira pasca Tragedi kanjuruhan Sepakbola Indonesia bakal intropeksi diri dan bebenah? Jelas kaga.
+19                                                                                                                                                             @zenrs Aku leren wes meloki bal-balan liga Indonesia pas enek tragedi Kanjuruhan dan ga rampung sampe saiki. Soale penyakit e wes angel diwarasne. Sumpek deloke.
+20                                                                                                                                                                                                                                                    @Fandom_ID Semenjak tragedi Kanjuruhan sdh gk menarik lagi nonton liga1 😂😂
+21                                                                                                                                                      Aku baru cek email dan trnyata ada email sejak awal  bulan nov bantuan Tahap 1 udah di salurkan..  hatiku masih sakit sama tragedi Kanjuruhan 😭  https://t.co/RhKs7M4Rfh
+22                                                                                                         @zenrs Setelah semuanya &quot;meledak&quot; di tragedi kanjuruhan. Kini masalah itu kembali diakumulasi, bergabung dgn masalah2 sejak dulu yg blm terselesaikan. Mungkin &quot;ledakan&quot; itu akan muncul lagi di masa yg akan datang.
+23                                                                                                                                   Pikiran Suporter (Podcast) X Tobias Ginanjar &quot;Liga 1 Berjalan, Jangan Lupakan Tragedi Kanjuruhan&quot;  @toptobs @v_frontline_pc @officialvpc #Liga1 #TragediKanjuruhan  https://t.co/9UDcWYrdTZ
+24                                                                                                                                                                                             Kita gak bisa nuntut perbaikan sepak bola nasional keseluruhan tp tutup mata dengan pengusutan tragedi Kanjuruhan. Mimpi kali ye.
+25                                                                                                                                       Alhamdulillah, KTT G20 udah selesai &amp;amp; akhirnya pengamanan acara pernikahan agung jg paripurna dgn suksesss. Tragedi Kanjuruhan kelanjutannya gmn @ListyoSigitP ?? korbannya 135 org
+26                                                                                                                                                                         Liga blm siap dimulai pasca tragedi Kanjuruhan, malah dipaksakan. Keputusan wasit juga akan memancing kerusuhan suporter yg bisa memakan korban jiwa.
+27                                                                                                                                                            @Fandom_ID sblm tragedi kanjuruhan perasaan ga se banyak ini dah, kek sepekan ±1-2 aja. ini abis tragedi yg katanya mau berbenah kok malah jadi lebih sering anjrt
+28                                                                                                                                 @officialocci itulah kenapa aku lelah dengan drama bertele ini,. kasus tragedi kanjuruhan juga belum selesai juga meski udah ada penetapan tersangka,. rasanya cuma kek normatif aja semuanya
+29                               @Fandom_ID Baru saja 130an orang meninggal dan ratusan lainnya luka2 karena sepakbola, masih ingat ga sih?wkwkwk @PSSI   Trus kepikiran gak sih kalo wasitnya begini2 aja berpotensi terjadi tragedi kanjuruhan 2, 3, 4, 5 dst?kemarin evaluasi ngapain aja wahai bapak2? @PSSI @iriawan84  😂😂😂
+30                                                                                                                                                                               @FaktaSepakbola Semenjak tragedi kanjuruhan gua makin enek aja liat liga indo, kalo bukan karna cinta sama club jakarta udah males liat nya jg🥺
+31                                                                                                                                                                                                                                 Mereka yang hadir di Kanjuruhan saat tragedi terjadi ada digelar kegiatan gini juga nggak ya?
+32                                                                                                                                                                                                                                                                                13.12 MENOLAK LUPA TRAGEDI KANJURUHAN #ACABday
+33                                                                                                                                                                                                                   Sejak tragedi kanjuruhan. Sudah tidak mau nonton liga 1, gak taunya kualitas sepak bolanya makin mantel aja
+34    @slttteth @ucihasasske @devaprima299 @kaesangp Lah bolone peyan sg nyenggol ndisik marai liga 1 distop, yo adewe sg ra salah opo2 kesel to mas e. Iki arema menang iso haha hihi ra kelingan isih ono tragedi Kanjuruhan sg rung diselidiki, aku yo turut berduka, tapi nek ws haha hihi kudune nek disenggol gelem to sam
+35                                           Tiga Keluarga Korban Tragedi Kanjuruhan Buat Laporan Baru ke Polres Malang.  Malang ( https://t.co/ksziGGp1k3) – Keluarga korban Tragedi Kanjuruhan terus mencari keadilan. Tiga keluarga…  https://t.co/DJZ5Z256dY #Peristiwa #KeluargaKorbanTragediKanjuruhan via @beritajatimcom
+36                                                                                   Jangankan minta maaf sekelas broadcaster  yg bikin tayangan malam hari Liga 1 sebagai sebab sampai terjadi tragedi Kanjuruhan.  Pemimpin media Mojok aja yang masih level bawah, belum juga minta maaf soal arogansinya moto2 tempat makan.
+37                                                                                                                                                                                                                                                                                apa kabar kasus tragedi kanjuruhan iki bos ???
+38                                      Happy 1.3.1.2 Day  Kapan institusi keamanan ini tidak mengancam rasa aman masyarakat lagi? 135 nyawa tragedi kanjuruhan dianggap hanya sebagai kejadian saja sampai sekarang #UsutTuntas #UsutTuntasTragediKanjuruhan masih jauh dr titik terang  Semoga para perusak segera dpt balasan
+39                                                                                                                                                                                                                                                     @SiaranBolaLive Undur diri setelah Tragedi Kanjuruhan ❓❓❓❓❓❓  #UsutTuntas
+40                                                                                                                                                                                                         6 Duka Mendalam di Tahun 2022, Meninggalnya Eril Anak Ridwan Kamil hingga Tragedi Kanjuruhan  https://t.co/MOpAZUfZXJ
+41                                                                                                                                                                                                                                           3 Keluarga Korban Tragedi Kanjuruhan Datangi Polres Malang  https://t.co/vITNPxgfMa
+42                                                                                                                                                                                                                Dikawal Aremania Menggugat, Tiga Keluarga Korban Tragedi Kanjuruhan Buat Laporan Baru  https://t.co/BDM5xK15t2
+43                                                                                                @AREMA1986Merch @kaesangp Sek dilakoni kaesang dinggo tragedi kanjuruhan wes akeh vot Kongres luar biasa. Iku wes bentuk upoyo gae sepakbola sek apik. Arema selaku sek kenek tragedi opo lelakonne. Gur meneng melok pak e IB
+44                                                                                                   Penyidik Ditreskrimum Polda Jatim kembali menyerahkan berkas perkara Tragedi Kanjuruhan, Malang ke kejaksaan Tinggi Jawa Timur. Pengembalian ini adalah yang kali kedua dari penyidik kepolisian.   https://t.co/KYTrvGzjkr
+45                                                                                                                                                @AremafcOfficial gimana pergerakan dan perkembangan soal tragedi kanjuruhan ?? sudah sampai mana ?? akankah terlelap begitu saja di makan oleh waktu ?? 100 nyawa lebih loh ??
+46                                                                                                                                                                                                                       40 HARI PASCA TRAGEDI KANJURUHAN, AHY AJAK RAKYAT KAWAL INVESTIGASI SAMPAI TUNTAS ❗ #AHYPimpinPerubahan
+47                                                                                                                                                                                       🙏🏻🙏🏻🙏🏻 khususon Almarhum/mah tragedy GBLA-Kanjuruhan (bonek-jak fans-bototoh) Alfatehah 🤲🏻  #UsutTuntas 💔🥀 #UsutTuntasTragediKanjuruhan
+48                                                                                                                                                                                       🙏🏻🙏🏻🙏🏻 khususon Almarhum/mah tragedy GBLA-Kanjuruhan (bonek-jak fans-bototoh) Alfatehah 🤲🏻  #UsutTuntas 💔🥀 #UsutTuntasTragediKanjuruhan
+49                                                                                                                                                                                                                                   Yang Tersisa dari Tragedi Kanjuruhan: Pengelolaan Stadion ke Depan  https://t.co/IinNrzHkrO
+50                                                                Malang, 2 bulan lebih setelah Tragedi Kanjuruhan. Kemarahan dan kesedihan masih terus bergema di setiap sudut kota.  Siapa pun akan turut merasakan, betapa nyawa yang hilang tak tergantikan. Dan usut tuntas adalah jalan keadilan.  https://t.co/72ca4G2Hjf
+51                                                                                                                                                                        @edi_sioon @idextratime Males nonton liga PSSI, semenjak tragedi kanjuruhan. Gua udh muak dgn persepakbolaan nasional. Bahkan nonton timnas pun males.
+52                                                                                                                                                                                                                                                                                 Happy 1312 day! Tragedi Kanjuruhan apa kabar?
+53                                 Indonesia saw one of the world&#39;s worst football tragedy on Oct 1st. 135 deaths. What happened exactly and what is behind Indonesia&#39;s Football Violence? Catch it on Thurs Dec 15 at 9pm SG/Msia time here  https://t.co/2IfaAVVvlN  #indonesia #football #kanjuruhan  https://t.co/lfbwwAFOdE
+54                                                                                                                                                                                                                                            AHY: Tragedi Kanjuruhan Insiden Yang Memilukan, Juga Memalukan #AHYPimpinPerubahan
+55                                                 Bener ancen akeh seng menyuarakan kejadian tragedi kajuruhan tapi setelah iku opo tetap awak e dewe Iki gampang di adu domba opo maneh suporter. Ayo berjuang Iki duduk masalah keadilan Kanjuruhan tok Iki gawe kedepan e anak cucu mu cek ga di gawe dulinan keadilan Iki !
+56                                                                                                                                                                                @rodrigosantono @DivHumas_Polri @HumasPoldaJatim Fotonya dijadiin gambar kaos #usuttuntas kelihatannya bagus. Foto legend tragedi Kanjuruhan..
+57                                                                                                                                                                                                                                                              @SiaranBolaLive Undur diri setelah #TRAGEDIKANJURUHAN :Aremania😓
+58                                                                                                                                                                                                              Semoga... #utas #usuttuntas #kawalsampaituntas #tragedikanjuruhan #justiceforkanjuruhan  https://t.co/a91zHWjjm9
+59                                                                                                                                                                                                                      Lagu &quot;Kanjuruhan&quot; sebagai Pengingat Tragedi Kanjuruhan  https://t.co/ziobYroWOc  https://t.co/9gpaV0vS0D
+60                                                                                                                                                                                                    @AREMA1986Merch @kaesangp Cara fikirmu aja yang kebalik, emang setelah tragedi kanjuruhan apa yang lu dapet dari Arema FC?
+61                                                                                                                                                                                                                                      Pembongkaran Pagar Stadion Tak Terkait Kasus Tragedi Kanjuruhan  https://t.co/vSOx4n2aRU
+62                                       GORO GORO KON KOLEM LIGA. TRAGEDI KANJURUHAN YG MENGORBANKAN 135+ NYAWA DADI BHN LELUCON SAK INDONESIA. JANCOK KON IKU. SAMPEK KPN PUN AYAS GAK BAKAL DUKUNG UMAK KABEH, SAMPEK TRAGEDI KANJURUHAN TERUSUT TUNTAS TANPA TERKECUALI TERMASUK SUPPORTER SENG MODON LAPANGAN!  #USUTTUNTAS
+63                                                                                                                                                                                                                                                    Pingpong Berkas Perkara Tragedi Kanjuruhan Malang  https://t.co/IYf79q6kbn
+64                                                                                                                                                                                                 Kapolresta Sidoarjo Salurkan Taliasih dan Bantuan Sepeda Untuk Anak Polisi Korban Tragedi Kanjuruhan  https://t.co/tWiVhVpD0O
+65                                                                                                                             @bukalepak @AremaPersib @garagarabola_ Semua elemen Suporter pada rusuh tapi hanya di #TRAGEDIKANJURUHAN yang dianggap kesalahan aremania...     udah dapat jatah pisang 🍌 dari sang SANG???  🙉🙈🙊
+66                                                                                                                       @kusmaya59835147 @AREMA1986Merch @kaesangp Ok kamu sudah menyalahkan aremania dan termasuk didalamnya para korban #TRAGEDIKANJURUHAN teruss yang polisi menembakkan gas beracun itu apa sudah di hukum?
+67                                           Dan Tragedi Kanjuruhan terjadi 😔😭😭😭 Besar harapan, khususnya ayas pribadi, klub ikut membantu mencari keadilan bagi semua korban dan keluarga, yg ternyata tagar Usut Tuntas saja datang belakangan 😥 entah karena terus ditekan, atau sebab lain  Kenyataan berlanjut, hashtag hny
+68                                                                                                                                                                            @AREMA1986Merch @kaesangp Nyindir siapa ini @AremafcOfficial ? Walau saat berhenti dulu mendukungmu tapi ada yang nyinyirin #TRAGEDIKANJURUHAN 😥😥😥
+69                                                                                                                                                                                                                                         apakah tim produksi liga turut aktif  berperan dalam pengungkapan tragedi kanjuruhan?
+70                        Kapolresta Sidoarjo Kombes Pol. Kusumo Wahyu Bintoro berikan bantuan kepada keluarga anggota polri korban tragedi Kanjuruhan.   Semoga keluarga diberi ketabahan dan semoga tragedi serupa tidak terulang kembali.   Sumber - Youtube: Seputar iNews Jatim  #polrestasidoarjo  https://t.co/OAZqOyQlYS
+71                                                     2. Seperti yang diketahui, sepakbola Indonesia tengah menjadi sorotan pasca Tragedi di Stadion Kanjuruhan 1 Oktober lalu, tragedi yang merengut 135 suporter tersebut menjadi tragedi ke dua setelah tragedi kemanusiaan di Peru pada tahun 1964 yang merengut 318 orang.
+72                                                                                                                            @The_RedsIndo Jauh sebelum tragedi kanjuruhan, saya sudah berhenti nonton liga ini, tapi masih tetap nonton Timnas. Seluruh lapisan dari liga ini kacau, ntah siapa yg bisa menyelamatkan liga ini
+73                                                                                                                                                                                              Nah.. kejadian tragedi kanjuruhan seharusnya membuka mata suporter bahwa menonton sepakbola liga indonesia memang tidak aman 👀..
+74                                                                                                                                                                                                                          @khyleri Yeah, that part killing 370 people in my country, u can search Kanjuruhan tragedy in Google
+75                                                                                                     @AremafcOfficial Wes kekno ae piala ne nang klub asu iki,mandegno ae liga ne pas jangkep 1/2 musim,mulai musim anyar maneh.Warah en piala ne piala kehormatan gae korban2 tragedi kanjuruhan. Klub kok ra duwe isin blas.
+76                                                                                                                                                                                                                   orang yang menganggap kematian tragedi kanjuruhan karena salah aremania sendiri banyak gak sih di internet?
+77                                                                                                                                           @mohmahfudmd @TVOne ini meyangkut juga keamanan &amp;amp; kesehatan para petugas  pemilu ga pak? masih ingat kan sama tragedi petugas pemilu tahun 2019? melebihin tragedi Kanjuruhan!!
+78                                                                                                                                                                                                                            @detikcom @detik_jatim Klo kalah PASTI ada tragedi kanjuruhan season 2, 3, 4 dst. Haparap maklum 😁
+79                                                                                                                                                                                                                                                 @idextratime Selama tragedi kanjuruhan ga ada kejelasan, HARAM liat liga indo
+Name: tweet, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;Kanjuruhan.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mengambil-data">
+<h1><strong>Mengambil Data</strong><a class="headerlink" href="#mengambil-data" title="Permalink to this headline">#</a></h1>
+<p>Proses ini digunakan untuk mengambil 100 data tweet yang telah disimpan dalam github dengan format .csv</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#install library pandas</span>
+<span class="o">!</span>pip install pandas
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (1.3.5)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas) (2022.6)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas) (1.21.6)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas) (2.8.2)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas) (1.15.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#install library numpy</span>
+<span class="o">!</span>pip install numpy
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: numpy in /usr/local/lib/python3.8/dist-packages (1.21.6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#install library sastrawi</span>
+<span class="o">!</span>pip install sastrawi
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#install library swifter</span>
+<span class="o">!</span>pip install swifter
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="case-folding">
+<h1><em>Case Folding</em>*<a class="headerlink" href="#case-folding" title="Permalink to this headline">#</a></h1>
+<p>Tahap untuk merubah teks yang memiliki huruf kapital menjadi huruf kecil</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#install library nltk</span>
+<span class="o">!</span>pip install nltk
+</pre></div>
+</div>
+</div>
+</div>
+<section id="menghapus-karakter-spesial">
+<h2>Menghapus Karakter Spesial<a class="headerlink" href="#menghapus-karakter-spesial" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span> 
+<span class="kn">import</span> <span class="nn">re</span> <span class="c1">#regex library</span>
+<span class="c1"># import word_tokenize &amp; FreqDist from NLTK</span>
+
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span> 
+<span class="kn">from</span> <span class="nn">nltk.probability</span> <span class="kn">import</span> <span class="n">FreqDist</span>
+
+<span class="c1"># ------ Tokenizing ---------</span>
+
+<span class="k">def</span> <span class="nf">remove_special</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># remove tab, new line, ans back slice</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">t&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">n&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">u&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">f&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">r&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="c1"># remove non ASCII (emoticon, chinese word, .etc)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+    <span class="c1"># remove mention, link, hashtag</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;([@#][A-Za-z0-9]+)|(\w+:\/\/\S+)&quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="c1"># remove incomplete URL</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;https://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+                
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_special</span><span class="p">)</span>
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghapus-angka">
+<h2>Menghapus Angka<a class="headerlink" href="#menghapus-angka" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#remove number</span>
+<span class="k">def</span> <span class="nf">remove_number</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_number</span><span class="p">)</span>
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghapus-tanda-baca">
+<h2>Menghapus Tanda Baca<a class="headerlink" href="#menghapus-tanda-baca" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#remove punctuation</span>
+<span class="k">def</span> <span class="nf">remove_punctuation</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">))</span>
+
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_punctuation</span><span class="p">)</span>
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghapus-spasi">
+<h2>Menghapus Spasi<a class="headerlink" href="#menghapus-spasi" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#remove whitespace leading &amp; trailing</span>
+<span class="k">def</span> <span class="nf">remove_whitespace_LT</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_whitespace_LT</span><span class="p">)</span>
+
+
+<span class="c1">#remove multiple whitespace into single whitespace</span>
+<span class="k">def</span> <span class="nf">remove_whitespace_multiple</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_whitespace_multiple</span><span class="p">)</span>
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghapus-huruf">
+<h2>Menghapus huruf<a class="headerlink" href="#menghapus-huruf" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># remove single char</span>
+<span class="k">def</span> <span class="nf">remove_singl_char</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\b[a-zA-Z]\b&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_singl_char</span><span class="p">)</span>
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tokenizing">
+<h1><strong>Tokenizing</strong><a class="headerlink" href="#tokenizing" title="Permalink to this headline">#</a></h1>
+<p>Tokenizing adalah proses pemisahan teks menjadi potongan-potongan yang disebut sebagai token untuk kemudian di analisa. Kata, angka, simbol, tanda baca dan entitas penting lainnya dapat dianggap sebagai token</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NLTK word Tokenize </span>
+<span class="k">def</span> <span class="nf">word_tokenize_wrapper</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">word_tokenize_wrapper</span><span class="p">)</span>
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="filtering-stopwords-removal">
+<h1><strong>Filtering(Stopwords Removal)</strong><a class="headerlink" href="#filtering-stopwords-removal" title="Permalink to this headline">#</a></h1>
+<p>Proses untuk menghapus kata hubung atau kata yang tidak memiliki makna</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_stopwords</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">)</span>
+
+<span class="c1">#Menghapus Stopword dari list token</span>
+<span class="k">def</span> <span class="nf">stopwords_removal</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list_stopwords</span><span class="p">]</span>
+
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stopwords_removal</span><span class="p">)</span>
+
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="stemming">
+<h1><strong>Stemming</strong><a class="headerlink" href="#stemming" title="Permalink to this headline">#</a></h1>
+<p>Data training hasil dari filtering akan dilakukan pengecekan atau pencarian kata-kata yang sesuai dengan kamus umum. Apabila data training hasil filtering sesuai dengan kamus umum maka kata akan dikeluarkan sementara, karena sudah dianggap sebagai kata dasar. Apabila masih terdapat kata yang tidak termasuk dalam kata dasar maka tahap selanjutnya adalah menghapus inflection suffixes yang merupakan akhiran pertama. Kata yang memiliki akhiran partticles seperti “-pun”, “-kah”, “-tah”, “- lah” dan akhiran possessive pronoun seperti “-mu”, “-ku” dan “-nya” dihilangkan. Setelah dilakukan proses case folding, tokenezing, dan filtering, proses selanjutnya yaitu stemming. Stemming yang digunakan pada penelitian ini menggunakan algoritma Enhanced Confix Stipping Stemmer, terdiri dari beberapa langkah: Data training hasil dari filtering akan dilakukan pengecekan atau pencarian kata-kata yang sesuai dengan kamus umum. Apabila data training hasil filtering sesuai dengan kamus umum maka kata akan dikeluarkan sementara, karena sudah dianggap sebagai kata dasar. Apabila masih terdapat kata yang tidak termasuk dalam kata dasar maka tahap selanjutnya adalah menghapus inflection suffixes yang merupakan akhiran pertama. Kata yang memiliki akhiran partticles seperti “-pun”, “-kah”, “-tah”, “- lah” dan akhiran possessive pronoun seperti “-mu”, “-ku” dan “-nya” dihilangkan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="kn">import</span> <span class="nn">swifter</span>
+
+
+<span class="c1"># create stemmer</span>
+<span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
+<span class="n">stemmer</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stemmer</span><span class="p">()</span>
+
+<span class="c1"># stemmed</span>
+<span class="k">def</span> <span class="nf">stemmed_wrapper</span><span class="p">(</span><span class="n">term</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+
+<span class="n">term_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">document</span> <span class="ow">in</span> <span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">document</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">term</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">term_dict</span><span class="p">:</span>
+            <span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+            
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">term_dict</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">term_dict</span><span class="p">:</span>
+    <span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="o">=</span> <span class="n">stemmed_wrapper</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="p">,</span><span class="s2">&quot;:&quot;</span> <span class="p">,</span><span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">])</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">term_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># apply stemmed term to dataframe</span>
+<span class="k">def</span> <span class="nf">get_stemmed_term</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">document</span><span class="p">]</span>
+
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">swifter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_stemmed_term</span><span class="p">)</span>
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>##Menyimpan Hasil Tahap Preprocessing ke file .csv</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_dfs</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;preproKajuruhan.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tf">
+<h1><strong>TF</strong><a class="headerlink" href="#tf" title="Permalink to this headline">#</a></h1>
+<p>TF(Term Frequency) : Istilah frekuensi kata dalam dokumen. Ada beberapa cara untuk menghitung frekuensi ini, dengan cara yang paling sederhana adalah dengan menghitung jumlah kata yang muncul dalam dokumen. Lalu, ada cara untuk menyesuaikan frekuensi, berdasarkan panjang dokumen, atau dengan frekuensi mentah kata yang paling sering muncul dalam dokumen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span><span class="p">,</span> <span class="n">TfidfVectorizer</span><span class="p">,</span> <span class="n">CountVectorizer</span>
+<span class="c1">#Membuat Dataframe</span>
+<span class="n">dataTextPre</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;preproKajuruhan.csv&#39;</span><span class="p">)</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">min_df</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">bag</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataTextPre</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrik_vsm</span><span class="o">=</span><span class="n">bag</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="c1">#print(matrik_vsm)</span>
+<span class="n">matrik_vsm</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrik_vsm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik_vsm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]))</span>
+<span class="c1">#dfb =pd.DataFrame(data=matrik_vsm,index=df,columns=[a])</span>
+<span class="n">dataTF</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">matrik_vsm</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrik_vsm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">)),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+<span class="n">dataTF</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="peringkasan-berita">
+<h1>2. Peringkasan Berita<a class="headerlink" href="#peringkasan-berita" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="kmeans">
+<h1>KMeans<a class="headerlink" href="#kmeans" title="Permalink to this headline">#</a></h1>
+<p>K-Means Clustering adalah suatu metode penganalisaan data atau metode Data Mining yang melakukan proses pemodelan unssupervised learning dan menggunakan metode yang mengelompokan data berbagai partisi.</p>
+<p>K Means Clustering memiliki objective yaitu meminimalisasi object function yang telah di atur pada proses clasterisasi. Dengan cara minimalisasi variasi antar 1 cluster dengan maksimalisasi variasi dengan data di cluster lainnya.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+
+<span class="n">kmeans</span> <span class="o">=</span><span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">kmeans</span><span class="o">=</span><span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataTF</span><span class="p">)</span>
+<span class="n">prediksi</span><span class="o">=</span><span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">dataTF</span><span class="p">)</span>
+<span class="n">centroids</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
+
+<span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">prediksi</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cluster&quot;</span><span class="p">])</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="meringkas-dokumen">
+<h1><strong>MERINGKAS DOKUMEN</strong><a class="headerlink" href="#meringkas-dokumen" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
+!pip install scrapy
+!pip install pandas
+!pip install scikit-learn
+!pip install --user -U nltk
+
+!pip install scipy
+!pip install networkx
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>rm -rf kompas_scrape.py hasil.json <span class="o">&amp;&amp;</span> sleep <span class="m">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> -a kompas_scrape.py
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">scrapy</span>
+<span class="kn">from</span> <span class="nn">scrapy</span> <span class="kn">import</span> <span class="n">Request</span>
+
+<span class="c1">#@markdown ---</span>
+<span class="c1">#@markdown ### Masukkan url artikel kompas.com :</span>
+<span class="n">artikel_url</span> <span class="o">=</span> <span class="s2">&quot;https://tekno.kompas.com/read/2022/10/10/14000087/kisah-aa-korban-pig-butchering-asal-indonesia-yang-rugi-rp-500-an-juta&quot;</span> <span class="c1">#@param {type:&quot;string&quot;}</span>
+<span class="n">artikel_url</span> <span class="o">=</span> <span class="n">artikel_url</span><span class="o">+</span><span class="s2">&quot;?page=all&quot;</span>
+<span class="c1">#@markdown ---</span>
+
+<span class="k">class</span> <span class="nc">ptaUTM</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Kompas&quot;</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="n">artikel_url</span>
+      <span class="p">]</span>
+
+
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">paragraf</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//div[contains(@class,&quot;clearfix&quot;)]/p/text()&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getall</span><span class="p">():</span>
+          <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">paragraf</span><span class="p">)</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;judul&#39;</span> <span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//h1[contains(@class,&quot;read__title&quot;)]/text()&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
+            <span class="s1">&#39;konten&#39;</span> <span class="p">:</span> <span class="n">a</span>
+        <span class="p">}</span>
+
+        <span class="k">yield</span> <span class="n">item</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="menjalankan-script-scrapy">
+<h2><strong>Menjalankan Script Scrapy</strong><a class="headerlink" href="#menjalankan-script-scrapy" title="Permalink to this headline">#</a></h2>
+<p>Setelah sebelumnya kita menulis script konfigurasi scrapy, selanjutnya kita akan menjalankan script tersebut dengan perintah “scrapy runspider” yang diikuti dengan nama berkas script dan dan nama berkas output untuk menyimpan hasilnya.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
+!scrapy runspider kompas_scrape.py -O hasil.json &amp;&amp; sleep 2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-hasil">
+<h2><strong>Import Hasil</strong><a class="headerlink" href="#import-hasil" title="Permalink to this headline">#</a></h2>
+<p>Setelah perintah sebelumnya berhasil dijalankan, selanjutnya kita akan melakukan import isi berkas hasil scrape sebelumnya kedalam Pandas DataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">chained_assignment</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_columns</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_rows</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">df_scrape</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;hasil.json&#39;</span><span class="p">)</span>
+<span class="n">df_scrape</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span>
+
+<span class="n">df_pisahkalimat</span> <span class="o">=</span> <span class="n">df_scrape</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_pisahkalimat</span> <span class="p">[</span><span class="s2">&quot;konten&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">sent_tokenize</span><span class="p">(</span><span class="n">df_pisahkalimat</span><span class="p">[</span><span class="s2">&quot;konten&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">df_pisahkalimat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_pisahkalimat</span><span class="p">[</span><span class="s2">&quot;konten&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;kalimat&quot;</span><span class="p">])</span>
+<span class="n">df_pisahkalimat</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span>
+
+<span class="n">df_pisahkalimat</span> <span class="o">=</span> <span class="n">df_scrape</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_pisahkalimat</span> <span class="p">[</span><span class="s2">&quot;konten&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">sent_tokenize</span><span class="p">(</span><span class="n">df_pisahkalimat</span><span class="p">[</span><span class="s2">&quot;konten&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">df_pisahkalimat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_pisahkalimat</span><span class="p">[</span><span class="s2">&quot;konten&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;kalimat&quot;</span><span class="p">])</span>
+<span class="n">df_pisahkalimat</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id1">
+<h3>Case Folding<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Case folding merupakan tahap text preprocessing yang berguna untuk :</p>
+<ul class="simple">
+<li><p>Mengubah huruf kapital menjadi huruf kecil</p></li>
+<li><p>Mengapus tanda baca</p></li>
+<li><p>Menghapus angka</p></li>
+<li><p>Menghapus karakter kosong</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
+<span class="n">df_casefolding</span> <span class="o">=</span> <span class="n">df_pisahkalimat</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">#mengubah menjadi huruf kecil</span>
+<span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="c1">#menghapus tanda baca</span>
+<span class="n">tanda_baca</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span>
+<span class="n">tanda_baca</span> <span class="o">=</span> <span class="n">tanda_baca</span><span class="o">+</span><span class="s2">&quot;–&quot;</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">tanda_baca</span><span class="p">:</span>
+    <span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[\</span><span class="si">%s</span><span class="s1">]&#39;</span><span class="o">%</span><span class="k">char</span>,&quot; &quot;, regex=True)
+
+<span class="c1">#menghapus angka</span>
+<span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#menghapus karakter kosong</span>
+<span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_casefolding</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="vectorization">
+<h3>Vectorization<a class="headerlink" href="#vectorization" title="Permalink to this headline">#</a></h3>
+<p>Dalam Machine Learning, vektorisasi adalah langkah dalam ekstraksi fitur. Idenya adalah untuk mendapatkan beberapa fitur berbeda dari teks untuk model untuk dilatih, dengan mengubah teks menjadi vektor numerik.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+<span class="n">cv</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+<span class="n">cv_matrix</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Banyaknya kosa kata = &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">((</span><span class="n">cv</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;kosa kata = &quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span>
+<span class="n">normal_matrix</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">cv_matrix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">toarray</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="cosine-similarity">
+<h3>Cosine Similarity<a class="headerlink" href="#cosine-similarity" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">vektorkalimat</span><span class="o">=</span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">A</span><span class="o">=</span><span class="n">vektorkalimat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">B</span><span class="o">=</span><span class="n">vektorkalimat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">dot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="n">norma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">normb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">cos</span> <span class="o">=</span> <span class="n">dot</span> <span class="o">/</span> <span class="p">(</span><span class="n">norma</span> <span class="o">*</span> <span class="n">normb</span><span class="p">)</span>
+<span class="n">cos</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="membangun-graph">
+<h2>Membangun Graph<a class="headerlink" href="#membangun-graph" title="Permalink to this headline">#</a></h2>
+<p>Graph merupakan sekumpulan objek terstruktur di mana beberapa pasangan objek mempunyai hubungan ataupun keterkaitan tertentu. Graph disini digunakan untuk melihat seberapa banyak hubungan antara kalimat satu dengan lainnya.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res_graph</span> <span class="o">=</span> <span class="n">normal_matrix</span> <span class="o">*</span> <span class="n">normal_matrix</span><span class="o">.</span><span class="n">T</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="n">nx_graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_scipy_sparse_matrix</span><span class="p">(</span><span class="n">res_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nx</span><span class="o">.</span><span class="n">draw_circular</span><span class="p">(</span><span class="n">nx_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pagerank">
+<h2>Pagerank<a class="headerlink" href="#pagerank" title="Permalink to this headline">#</a></h2>
+<p>PageRank adalah algoritma analisis tautan dan memberikan bobot numerik untuk setiap elemen dari kumpulan dokumen yang ditautkan.</p>
+<p>Perhitungan PageRank memerlukan beberapa lintasan, yang disebut “iterasi”, melalui koleksi untuk menyesuaikan perkiraan nilai PageRank agar lebih mencerminkan nilai teoretis yang sebenarnya.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scores = nx.pagerank(nx_graph, alpha=0.88, max_iter=1000, )</span>
+<span class="c1"># scores</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Persentase Ringkasan</span>
+<span class="c1">#@markdown ---</span>
+<span class="c1">#@markdown ### Tentukan persentase ringkasan : total kalimat:</span>
+<span class="n">persentase_ringkasan</span> <span class="o">=</span> <span class="mi">60</span> <span class="c1">#@param {type:&quot;slider&quot;, min:50, max:90, step:10}</span>
+<span class="c1">#@markdown ---</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mencocokkan indeks kalimat asli dan kalimat hasil preprocessing</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># top_sentence={sentence:scores[index] for index,sentence in enumerate(df_pisahkalimat[&quot;kalimat&quot;].values)}</span>
+
+<span class="c1"># persentase = len(df_pisahkalimat[&quot;kalimat&quot;])*persentase_ringkasan//100</span>
+<span class="c1"># print(&quot;Jumlah Kalimat pada Ringkasan : &quot;,persentase)</span>
+<span class="c1"># top=dict(sorted(top_sentence.items(), key=lambda x: x[1], reverse=True)[:persentase])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="hasil-dan-perbandingan">
+<h3>Hasil dan perbandingan<a class="headerlink" href="#hasil-dan-perbandingan" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ringkasan = &quot;&quot;</span>
+<span class="c1"># for sent in df_pisahkalimat[&quot;kalimat&quot;].values:</span>
+<span class="c1">#     if sent in top.keys():</span>
+<span class="c1">#         ringkasan = ringkasan+&quot; &quot;+sent</span>
+
+<span class="c1"># #ringkasan</span>
+<span class="c1"># perbandingan = {&#39;Teks asli&#39; : df_scrape[&quot;konten&quot;], &#39;Hasil Ringkasan&#39; : [ringkasan]}</span>
+<span class="c1"># df_perbandingan = pd.DataFrame(perbandingan)</span>
+<span class="c1"># df_perbandingan</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="notebooks.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><strong>Data crawling</strong></p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
