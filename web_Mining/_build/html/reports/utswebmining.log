@@ -21,7 +21,7 @@ import nest_asyncio
 nest_asyncio.apply() #digunakan sekali untuk mengaktifkan tindakan serentak dalam notebook jupyter.
 import twint #untuk import twint
 c = twint.Config()
-c.Search = 'prabowo'
+c.Search = 'tragedi Kanjuruhan'
 c.Pandas = True
 c.Limit = 70
 twint.run.Search(c)
@@ -29,12 +29,12 @@ twint.run.Search(c)
 
 [0;31m[0m
 [0;31mModuleNotFoundError[0mTraceback (most recent call last)
-[0;32m<ipython-input-6-3678020f6b50>[0m in [0;36m<module>[0;34m[0m
+[0;32m<ipython-input-6-4c503b1aeb97>[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0;32mimport[0m [0mnest_asyncio[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      2[0m [0mnest_asyncio[0m[0;34m.[0m[0mapply[0m[0;34m([0m[0;34m)[0m [0;31m#digunakan sekali untuk mengaktifkan tindakan serentak dalam notebook jupyter.[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 3[0;31m [0;32mimport[0m [0mtwint[0m [0;31m#untuk import twint[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      4[0m [0mc[0m [0;34m=[0m [0mtwint[0m[0;34m.[0m[0mConfig[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      5[0m [0mc[0m[0;34m.[0m[0mSearch[0m [0;34m=[0m [0;34m'prabowo'[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0mc[0m[0;34m.[0m[0mSearch[0m [0;34m=[0m [0;34m'tragedi Kanjuruhan'[0m[0;34m[0m[0;34m[0m[0m
 
 [0;31mModuleNotFoundError[0m: No module named 'twint'
 
